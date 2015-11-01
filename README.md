@@ -2,11 +2,7 @@
 
 A node module to easily insert content from a file to another. Check out the example below.
 
----
-
 ##Install:
-
----
 
 NPM: `npm install -g append-file`
 
