@@ -43,7 +43,7 @@ alert('hello again');
 </html>
 ```
 
-Now remember to always put source file(s) in the same directory of the destination file. Execute this command to append sou.css and script.js to dest.html
+**Now remember to always put source file(s) in the same directory of the destination file.** Execute this command to append sou.css and script.js to dest.html
  
 `append-file dest.html`
 
