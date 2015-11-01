@@ -1,3 +1,13 @@
+#Append file
+
+---
+
+A node module to easily insert content from a file to another. Check out the example below.
+
+---
+
+```
+<!-- dest.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +15,13 @@
     <title></title>
     <style>
         /*<sou.css>*/
-        .add{
-            background-color:red;
-        }
-        .substract{
-            color:green;
-        }
         /*</sou.css>*/
     </style>
 </head>
 <body>
 </body>
 </html>
+```
+
+Now remember to always 
+ 

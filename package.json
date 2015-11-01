@@ -1,14 +1,22 @@
 {
   "name": "append-file",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node module to easily insert content from one file or more to another.",
   "main": "append.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chuson1996/append-file.git"
+  },
+  "author": "Chu Hoang Son",
+  "license": "MIT",
   "dependencies": {
     "async": "^1.5.0"
-  }
+  },
+  "bin":{
+    "append-file":"bin/append.js"
+  },
+  "preferGlobal": "true"
 }
