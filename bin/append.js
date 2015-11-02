@@ -19,15 +19,15 @@ fs.readFile(destFile, 'utf8', function (err, data) {
 
 
 function replaceContent(dest){
-    dest.match(/\/\*<([a-zA-Z0-9\._]+)>\*\/(.|[\r\n\t\s])+?\/\*<\/\1>\*\//g).forEach(function (pair) {
-        var start = pair.match(/\/\*<([a-zA-Z0-9\._]+)>\*\//)[0];
-        var end = pair.match(/\/\*<\/([a-zA-Z0-9\._]+)>\*\//)[0];
+    dest.match(/\/\*<([a-zA-Z0-9\._//]+)>\*\/(.|[\r\n\t\s])+?\/\*<\/\1>\*\//g).forEach(function (pair) {
+        var start = pair.match(/\/\*<([a-zA-Z0-9\._//]+)>\*\//)[0];
+        var end = pair.match(/\/\*<\/([a-zA-Z0-9\._//]+)>\*\//)[0];
         var file = path.resolve(root, pair.match(/[^\/\*<>]+/)[0]);
         //console.log(dest.indexOf(start));
         //console.log(dest.indexOf(end));
         //console.log(file);
 
-        var indent = dest.match(/(\s+)(?=\/\*<([a-zA-Z0-9\._]+)>\*\/)/gm)[0].replace(/[\n\r]/g,'');
+        var indent = dest.match(/(\s+)(?=\/\*<([a-zA-Z0-9\._//]+)>\*\/)/gm)[0].replace(/[\n\r]/g,'');
         async.waterfall([
             function findAndReadSourceFile(cb) {
                 fs.readFile(file, 'utf8', function (err, sou) {
