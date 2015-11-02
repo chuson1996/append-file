@@ -18,5 +18,6 @@
   "bin": {
     "append-file": "bin/append.js"
   },
-  "preferGlobal": "true"
+  "preferGlobal": "true",
+  "devDependencies": {}
 }

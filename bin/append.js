@@ -21,8 +21,11 @@ fs.readFile(destFile, 'utf8', function (err, data) {
 function replaceContent(dest){
     dest.match(/\/\*<([a-zA-Z0-9\._//]+)>\*\/(.|[\r\n\t\s])+?\/\*<\/\1>\*\//g).forEach(function (pair) {
         var start = pair.match(/\/\*<([a-zA-Z0-9\._//]+)>\*\//)[0];
+        console.log(start);
+
         var end = pair.match(/\/\*<\/([a-zA-Z0-9\._//]+)>\*\//)[0];
-        var file = path.resolve(root, pair.match(/[^\/\*<>]+/)[0]);
+        console.log(end);
+        var file = path.resolve(path.dirname(destFile), end.replace('/*</','').replace('>*/',''));
         //console.log(dest.indexOf(start));
         //console.log(dest.indexOf(end));
         //console.log(file);
